@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TarkariGhar</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>TarkariGhar</h1>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="meals.html">Meals</a></li>
+            <li><a href="vegetables.html">Vegetables</a></li>
+            <li><a href="fruits.html">Fruits</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="login-section">
+
+        <div class="login-box">
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p>
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            const user =
+                JSON.parse(localStorage.getItem("user"));
+
+            if(!user){
+
+                alert(
+                    "No account found. Please register first."
+                );
+
+                return;
+            }
+
+            if(
+                email === user.email &&
+                password === user.password
+            ){
+
+                localStorage.setItem(
+                    "loggedIn",
+                    "true"
+                );
+
+                localStorage.setItem(
+                    "loggedInUser",
+                    user.name
+                );
+
+                alert("Login Successful!");
+
+                window.location.href =
+                    "../index.html";
+
+            } else {
+
+                alert(
+                    "Invalid Email or Password"
+                );
+
+            }
+
+        });
+
+    </script>
+
+    <footer>
+    <h3>TarkariGhar</h3>
+
+    <p>Fresh vegetables and meal kits delivered to your doorstep.</p>
+
+    <p>Email: support@tarkarighar.com</p>
+
+    <p>© 2026 TarkariGhar. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
