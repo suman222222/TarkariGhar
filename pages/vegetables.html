@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables - TarkariGhar</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>TarkariGhar</h1>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="meals.html">Meals</a></li>
+            <li><a href="vegetables.html">Vegetables</a></li>
+            <li><a href="fruits.html">Fruits</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="popular-meals">
+
+        <h2>Fresh Vegetables</h2>
+
+        <div class="meal-container">
+
+            <div class="meal-card">
+                <img src="../images/tomato.png" alt="Tomato">
+                <h3>Tomato</h3>
+                <p>Rs. 80 per kg</p>
+                <button onclick="addToCart('Tomato',80)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="meal-card">
+                <img src="../images/potatoes.png" alt="Potato">
+                <h3>Potato</h3>
+                <p>Rs. 50 per kg</p>
+                <button onclick="addToCart('Potato',50)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="meal-card">
+                <img src="../images/carrot.png" alt="Carrot">
+                <h3>Carrot</h3>
+                <p>Rs. 90 per kg</p>
+                <button onclick="addToCart('Carrot',90)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="meal-card">
+                <img src="../images/cabbage.png" alt="Cabbage">
+                <h3>Cabbage</h3>
+                <p>Rs. 75 each</p>
+                <button onclick="addToCart('Cabbage',75)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="meal-card">
+                <img src="../images/couli.png" alt="Cauliflower">
+                <h3>Cauliflower</h3>
+                <p>Rs. 100 each</p>
+                <button onclick="addToCart('Cauliflower',100)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="meal-card">
+                <img src="../images/pumpkins.png" alt="Pumpkin">
+                <h3>Pumpkin</h3>
+                <p>Rs. 90 per kg</p>
+                <button onclick="addToCart('Pumpkin',90)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/cart.js"></script>
+
+</body>
+</html>
